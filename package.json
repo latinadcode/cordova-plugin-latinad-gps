@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-latinad-gps",
+  "version": "1.0.0",
+  "description": "Reads the position straight from Android's GPS provider (LocationManager), bypassing the WebView's fused provider.",
+  "cordova": {
+    "id": "cordova-plugin-latinad-gps",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "gps",
+    "location",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova-android": ">=10.0.0"
+      }
+    }
+  },
+  "author": "LatinAd",
+  "license": "MIT"
+}

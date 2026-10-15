@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-latinad-gps"
+        version="1.0.0">
+    <name>LatinAd GPS</name>
+    <description>Reads the position straight from Android's GPS provider (LocationManager), bypassing the WebView's fused provider.</description>
+    <license>MIT</license>
+
+    <js-module src="www/LatinadGps.js" name="LatinadGps">
+        <clobbers target="LatinadGps" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LatinadGps">
+                <param name="android-package" value="com.latinad.cordova.plugin.gps.LatinadGps"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </config-file>
+
+        <source-file src="src/android/LatinadGps.java"
+                     target-dir="app/src/main/java/com/latinad/cordova/plugin/gps"/>
+    </platform>
+</plugin>
